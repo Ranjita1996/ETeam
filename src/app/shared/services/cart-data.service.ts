@@ -36,6 +36,8 @@ export class CartDataService {
     // handle success and error
     // if success do the following
     // keep the exisiting items and add one more into it
+
+    
     this.latestCartItems.pipe(take(1)).subscribe( val => {
       console.log(val);
       console.log(...val); // spread operator
