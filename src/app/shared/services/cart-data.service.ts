@@ -7,8 +7,8 @@ import { take } from 'rxjs/operators';
 })
 export class CartDataService {
 
-   // have one variable to hold cartItems -- an array
-   private currentCartItems: any[] = [
+  // have one variable to hold cartItems -- an array
+  private currentCartItems: any[] = [
     {
       id: 2,
       name: 'Butter',
@@ -36,9 +36,7 @@ export class CartDataService {
     // handle success and error
     // if success do the following
     // keep the exisiting items and add one more into it
-
-    
-    this.latestCartItems.pipe(take(1)).subscribe( val => {
+    this.latestCartItems.pipe(take(1)).subscribe(val => {
       console.log(val);
       console.log(...val); // spread operator
       const newArr = [...val, product];

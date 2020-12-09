@@ -17,7 +17,7 @@ export class ContactsComponent implements OnInit, OnDestroy {
 
   constructor(private contactService: ContactService) { // 1. connect to the service using dep injection
     console.log('Inside Constructor');
-   }
+  }
 
   ngOnInit(): void { // Lifecycle hook
     // ideal place to send ajax calls
@@ -31,14 +31,14 @@ export class ContactsComponent implements OnInit, OnDestroy {
       });
   }
 
-    // will be called when our comp goes out of the view
-    ngOnDestroy(): void {
-      console.log('Into destroy');
-      // ideal place for you to unsubscribe, clear the data, remove intervals
-      this.contactsSubscription.unsubscribe();
-      if (this.contactList && this.contactList.length > 0) {
-        this.contactList.length = 0;
-      }
+  // will be called when our comp goes out of the view
+  ngOnDestroy(): void {
+    console.log('Into destroy');
+    // ideal place for you to unsubscribe, clear the data, remove intervals
+    this.contactsSubscription.unsubscribe();
+    if (this.contactList && this.contactList.length > 0) {
+      this.contactList.length = 0;
     }
+  }
 
 }

@@ -19,9 +19,9 @@ export class ContactService {
     console.log(contactFormData);
 
     // 2. send the req to the rest api
-      // 2.1. what's the rest api url? - http://jsonplaceholder.typicode.com/users
-      // 2.2. what's the http method? - GET
-      // 2.3. What's the tool we have to use to sent the above data? - HttpClient
+    // 2.1. what's the rest api url? - http://jsonplaceholder.typicode.com/users
+    // 2.2. what's the http method? - GET
+    // 2.3. What's the tool we have to use to sent the above data? - HttpClient
     // http promise method
     const createContactPromise = new Promise((resolve, reject) => {
 
@@ -47,9 +47,9 @@ export class ContactService {
   getContacts(): Observable<Contact[]> { // 1. get the req from comp.ts
     console.log('Inside service');
     // 2. send the req to the rest api
-      // 2.1. what's the rest api url? - http://jsonplaceholder.typicode.com/users
-      // 2.2. what's the http method? - GET
-      // 2.3. What's the tool we have to use to sent the above data? - HttpClient
+    // 2.1. what's the rest api url? - http://jsonplaceholder.typicode.com/users
+    // 2.2. what's the http method? - GET
+    // 2.3. What's the tool we have to use to sent the above data? - HttpClient
     return this.http.get(this.REST_API_URL)
       .pipe(map((res: Contact[]) => { // 3. get the resp from the rest api backend
         console.log(res);
@@ -81,10 +81,10 @@ export class ContactService {
   deleteContact(contactData: Contact): Observable<Contact> {
     // const URL = this.REST_API_URL + '/' + contactData.id;
     return this.http.delete(this.REST_API_URL + '/' + contactData)
-    .pipe(map((res: Contact) => {
-      console.log(res);
-      return res;
-    }));
+      .pipe(map((res: Contact) => {
+        console.log(res);
+        return res;
+      }));
 
   }
 }

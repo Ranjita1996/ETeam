@@ -7,7 +7,7 @@ export class ProductService {
 
   constructor() { }
 
-  getProducts(): any[]{
+  getProducts(): any[] {
     return [{
       id: 1,
       name: 'Apple',

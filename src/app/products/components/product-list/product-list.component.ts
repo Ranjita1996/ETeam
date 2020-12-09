@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
     console.log(this.productList);
   }
 
-  addToCartHandler(product: any): void{
+  addToCartHandler(product: any): void {
     console.log(product);
     this.cartDataService.updateCart(product);
   }

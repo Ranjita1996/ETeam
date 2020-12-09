@@ -39,25 +39,25 @@ export class ContactDetailsComponent implements OnInit {
     console.log(this.duplicateContactData);
 
     this.contactService.updateContact(this.duplicateContactData)
-    .subscribe((res: any) => {
-      console.log(res);
-      if (res && res.id) {
-        this.isUpdated = true;
-        this.contactData = res;
-      }
-    });
+      .subscribe((res: any) => {
+        console.log(res);
+        if (res && res.id) {
+          this.isUpdated = true;
+          this.contactData = res;
+        }
+      });
   }
 
   deleteContactHandler(): void {
     this.contactService.deleteContact(this.duplicateContactData)
-    .subscribe((res: Contact) => {
-      console.log(res.id);
-      if (res.id === undefined) {
-        this.isDeleted = true;
-      }
-      else {
-        this.isDeleted = false;
-      }
-    });
+      .subscribe((res: Contact) => {
+        console.log(res.id);
+        if (res.id === undefined) {
+          this.isDeleted = true;
+        }
+        else {
+          this.isDeleted = false;
+        }
+      });
   }
 }

@@ -1,8 +1,8 @@
-import { ColorizerDirective } from './colorizer.directive';
+import { DemoIfDirective } from './demo-if.directive';
 
-describe('ColorizerDirective', () => {
+describe('DemoIfDirective', () => {
   it('should create an instance', () => {
-    const directive = new ColorizerDirective();
+    const directive = new DemoIfDirective();
     expect(directive).toBeTruthy();
   });
 });

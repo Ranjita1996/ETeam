@@ -13,7 +13,7 @@ export interface IContact {
 @Injectable({
   providedIn: 'root'
 })
-export class Contact implements IContact{
+export class Contact implements IContact {
   id: number;
   name: string;
   phone: string;
